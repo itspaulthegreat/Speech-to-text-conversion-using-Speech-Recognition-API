@@ -1,6 +1,5 @@
 from apifunction import recognize_speech_from_mic
 import speech_recognition as sr
-
 if __name__ == "__main__":
     
         recognizer = sr.Recognizer()
@@ -11,4 +10,6 @@ if __name__ == "__main__":
                         response['error'],
                         '-'*17,
                         response['transcription']))
+
+        web.run_app(app)
         

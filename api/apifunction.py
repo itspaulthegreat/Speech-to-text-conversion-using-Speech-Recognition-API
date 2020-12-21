@@ -45,14 +45,3 @@ def recognize_speech_from_mic(recognizer, microphone):
         response["error"] = "Unable to recognize speech"
 
     return response
-
-if __name__ == "__main__":
-    
-    recognizer = sr.Recognizer()
-    mic = sr.Microphone(device_index=1)
-    response = recognize_speech_from_mic(recognizer, mic)
-    print('\nSuccess : {}\nError   : {}\n\nText from Speech\n{}\n\n{}' \
-            .format(response['success'],
-                    response['error'],
-                    '-'*17,
-                    response['transcription']))
